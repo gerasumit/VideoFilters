@@ -14,6 +14,10 @@
 		10B1CF051B4BE89400667B3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B1CF041B4BE89400667B3C /* Images.xcassets */; };
 		10B1CF081B4BE89400667B3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B1CF061B4BE89400667B3C /* LaunchScreen.xib */; };
 		10B1CF141B4BE89400667B3C /* FilterLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1CF131B4BE89400667B3C /* FilterLibraryTests.m */; };
+		10B1CF201B4C0A6400667B3C /* FunctionalCoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1CF1F1B4C0A6400667B3C /* FunctionalCoreImage.m */; };
+		10B1CF231B4C0DFC00667B3C /* VideoSampleBufferSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1CF221B4C0DFC00667B3C /* VideoSampleBufferSource.m */; };
+		10B1CF261B4C2B0A00667B3C /* CoreImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1CF251B4C2B0A00667B3C /* CoreImageView.m */; };
+		10B1CF281B4C620B00667B3C /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 10B1CF271B4C620A00667B3C /* video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		10B1CF0D1B4BE89400667B3C /* FilterLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilterLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B1CF121B4BE89400667B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B1CF131B4BE89400667B3C /* FilterLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterLibraryTests.m; sourceTree = "<group>"; };
+		10B1CF1E1B4C0A6400667B3C /* FunctionalCoreImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionalCoreImage.h; sourceTree = "<group>"; };
+		10B1CF1F1B4C0A6400667B3C /* FunctionalCoreImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionalCoreImage.m; sourceTree = "<group>"; };
+		10B1CF211B4C0DFC00667B3C /* VideoSampleBufferSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSampleBufferSource.h; sourceTree = "<group>"; };
+		10B1CF221B4C0DFC00667B3C /* VideoSampleBufferSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSampleBufferSource.m; sourceTree = "<group>"; };
+		10B1CF241B4C2B0A00667B3C /* CoreImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreImageView.h; sourceTree = "<group>"; };
+		10B1CF251B4C2B0A00667B3C /* CoreImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreImageView.m; sourceTree = "<group>"; };
+		10B1CF271B4C620A00667B3C /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video.mp4; path = ../../Downloads/video.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,8 @@
 		10B1CEEB1B4BE89300667B3C = {
 			isa = PBXGroup;
 			children = (
+				10B1CF271B4C620A00667B3C /* video.mp4 */,
+				10B1CF1D1B4BE89D00667B3C /* Library */,
 				10B1CEF61B4BE89400667B3C /* FilterLibrary */,
 				10B1CF101B4BE89400667B3C /* FilterLibraryTests */,
 				10B1CEF51B4BE89400667B3C /* Products */,
@@ -117,6 +130,19 @@
 				10B1CF121B4BE89400667B3C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10B1CF1D1B4BE89D00667B3C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				10B1CF1E1B4C0A6400667B3C /* FunctionalCoreImage.h */,
+				10B1CF1F1B4C0A6400667B3C /* FunctionalCoreImage.m */,
+				10B1CF211B4C0DFC00667B3C /* VideoSampleBufferSource.h */,
+				10B1CF221B4C0DFC00667B3C /* VideoSampleBufferSource.m */,
+				10B1CF241B4C2B0A00667B3C /* CoreImageView.h */,
+				10B1CF251B4C2B0A00667B3C /* CoreImageView.m */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B1CF281B4C620B00667B3C /* video.mp4 in Resources */,
 				10B1CF031B4BE89400667B3C /* Main.storyboard in Resources */,
 				10B1CF081B4BE89400667B3C /* LaunchScreen.xib in Resources */,
 				10B1CF051B4BE89400667B3C /* Images.xcassets in Resources */,
@@ -219,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B1CF231B4C0DFC00667B3C /* VideoSampleBufferSource.m in Sources */,
 				10B1CF001B4BE89400667B3C /* ViewController.m in Sources */,
 				10B1CEFD1B4BE89400667B3C /* AppDelegate.m in Sources */,
+				10B1CF261B4C2B0A00667B3C /* CoreImageView.m in Sources */,
 				10B1CEFA1B4BE89400667B3C /* main.m in Sources */,
+				10B1CF201B4C0A6400667B3C /* FunctionalCoreImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FilterLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FilterLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
