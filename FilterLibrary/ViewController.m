@@ -34,7 +34,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    NSURL * url = [[NSBundle mainBundle] URLForResource:@"video" withExtension:@"mp4"];
+    NSURL * url = [[NSBundle mainBundle] URLForResource:@"Cat" withExtension:@"mp4"];
     videoSource = [[VideoSampleBufferSource alloc] initWithURL:url withCallbackBlock:^(CVPixelBufferRef buffer) {
         CIImage * image = [CIImage imageWithCVPixelBuffer:buffer];
         CIImage * background = [FunctionalCoreImage blurWithRadius:10.0 andImage:image];
