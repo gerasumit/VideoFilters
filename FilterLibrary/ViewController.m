@@ -39,6 +39,7 @@
         CIImage * image = [CIImage imageWithCVPixelBuffer:buffer];
         CIImage * background = [FunctionalCoreImage blurWithRadius:10.0 andImage:image];
         coreImageView.image = background;
+        [coreImageView display];
     }];
 }
 
